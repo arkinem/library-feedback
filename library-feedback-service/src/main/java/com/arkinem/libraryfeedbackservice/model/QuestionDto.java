@@ -5,20 +5,20 @@ import java.util.UUID;
 
 import javax.validation.constraints.NotBlank;
 
-public class Question {
+public class QuestionDto {
 	
 	private final UUID id;
 	@NotBlank
 	private final String body;
 	@NotBlank
-	private final List<UUID> answerIds; 
+	private final List<Answer> answers; 
 	
 	private final boolean isDeleted;
 	
-	public Question(UUID id, String body, List<UUID> answerIds, boolean isDeleted) {
+	public QuestionDto(UUID id, String body, List<Answer> answers, boolean isDeleted) {
 		this.id = id;
 		this.body = body;
-		this.answerIds = answerIds;
+		this.answers = answers;
 		this.isDeleted = isDeleted;
 	}
 	
@@ -30,8 +30,8 @@ public class Question {
 		return body;
 	}
 	
-	public List<UUID> getAnswerIds() {
-		return answerIds;
+	public List<Answer> getAnswers() {
+		return answers;
 	}
 	
 	public boolean getIsDeleted() {

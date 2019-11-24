@@ -7,7 +7,7 @@ import javax.validation.constraints.NotBlank;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Answer {
-	private final UUID id;
+	private UUID id;
 	@NotBlank
 	private final String body;
 	
@@ -17,8 +17,12 @@ public class Answer {
 		this.body = body;
 	}
 	
-	public UUID getId( ) {
+	public UUID getId() {
 		return id;
+	}
+	
+	public void setId(UUID id) {
+		this.id = id;
 	}
 	
 	public String getBody() {
