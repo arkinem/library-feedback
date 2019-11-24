@@ -1,5 +1,6 @@
 package com.arkinem.libraryfeedbackservice.model;
 
+import java.util.List;
 import java.util.UUID;
 
 import javax.validation.constraints.NotBlank;
@@ -12,13 +13,13 @@ public class Question {
 	@NotBlank
 	private final String body;
 	@NotBlank
-	private final Answer[] answers; 
+	private final List<Answer> answers; 
 	
 	private final boolean isDeleted;
 	
 	public Question(@JsonProperty("id") UUID id,
 				  @JsonProperty("body") String body,
-				  @JsonProperty("answers") Answer[] answers,
+				  @JsonProperty("answers") List<Answer> answers,
 				  @JsonProperty("isDeleted") boolean isDeleted) {
 		this.id = id;
 		this.body = body;
@@ -34,7 +35,7 @@ public class Question {
 		return body;
 	}
 	
-	public Answer[] getAnswers() {
+	public List<Answer> getAnswers() {
 		return answers;
 	}
 	
