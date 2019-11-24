@@ -10,7 +10,7 @@ public class QuestionDto {
 	private final UUID id;
 	@NotBlank
 	private final String body;
-	@NotBlank
+
 	private final List<Answer> answers; 
 	
 	private final boolean isDeleted;
