@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.util.List;
 
-public class LibraryClient {
+public class LibraryFeedback {
     /**
      * Creates an Example SwingWorker
      */
@@ -76,7 +76,7 @@ public class LibraryClient {
     	
     	
         // Create the worker
-        LibraryClient l = new LibraryClient();
+        LibraryFeedback l = new LibraryFeedback();
         SwingWorker<Boolean, Integer> work = l.createWorker();
         work.execute();
 
