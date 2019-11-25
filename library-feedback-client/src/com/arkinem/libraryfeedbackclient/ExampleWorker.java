@@ -1,9 +1,10 @@
+package com.arkinem.libraryfeedbackclient;
 import javax.swing.*;
 import java.util.List;
 
-public class LibraryFeedback {
+public class ExampleWorker {
     /**
-     * Creates an Example SwingWorker
+     * Creates an SwingWorker
      */
     public SwingWorker<Boolean, Integer> createWorker() {
         return new SwingWorker<Boolean, Integer>() {    		
@@ -76,7 +77,7 @@ public class LibraryFeedback {
     	
     	
         // Create the worker
-        LibraryFeedback l = new LibraryFeedback();
+		ExampleWorker l = new ExampleWorker();
         SwingWorker<Boolean, Integer> work = l.createWorker();
         work.execute();
 
